@@ -37,12 +37,13 @@ The model generates **high-quality, photorealistic outputs** while preserving su
 
 ---
 
-## ⚙️ How It Works
+## 🎥 Demo Workflow
 
-1. Upload an original image
-2. Upload a mask image (white = area to modify)
-3. Provide a text prompt
-4. Model generates realistic content in masked region
+1. Upload original image  
+2. Upload mask (white = region to edit)  
+3. Enter prompt  
+4. Run model  
+5. Get inpainted output  
 
 ---
 
@@ -54,6 +55,16 @@ The model generates **high-quality, photorealistic outputs** while preserving su
 * VAE (encoding & decoding)
 
 ---
+## 🔬 Technical Insight
+
+This project uses a **Latent Diffusion Model (LDM)**, which operates in a compressed latent space instead of pixel space.
+
+Advantages:
+- Faster computation  
+- Lower memory usage  
+- High-quality generation  
+
+Classifier-Free Guidance (CFG) is used to control how strongly the output follows the text prompt.
 
 ## 📊 Sample Output
 
@@ -92,6 +103,12 @@ The model generates **high-quality, photorealistic outputs** while preserving su
 
 ---
 
+## ⚠️ Note
+
+GitHub may not display the notebook properly due to rendering limitations.
+
+👉 Please use the **"Open in Colab"** button above to view and run the notebook.
+
 ## ▶️ Installation
 
 pip install diffusers transformers accelerate torch torchvision pillow
@@ -110,11 +127,20 @@ This project demonstrates the power of **Generative AI** in image restoration an
 
 ---
 
-## 🚀 Future Improvements
+## 📈 Results
 
-* Segment Anything Model (SAM) integration
-* Stable Diffusion XL support
-* Web app (Streamlit / Flask)
+The model successfully:
+- Removes artifacts and noise  
+- Maintains texture consistency  
+- Generates semantically meaningful content  
+
+The output is both visually realistic and context-aware.
+## 🚀 Future Scope
+
+- Integrate Segment Anything Model (SAM) for automatic masking  
+- Upgrade to Stable Diffusion XL  
+- Build a web interface using Streamlit  
+- Add real-time editing capability  
 
 ---
 
